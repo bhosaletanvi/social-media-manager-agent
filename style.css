@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #F7F8FC;
+    background-color: #FDF2F8;
     color: #2D2E32;
 }
 
@@ -19,7 +19,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 230px;
-    background: #EC4899;
+    background: linear-gradient(180deg, #EC4899, #DB2777);
     color: white;
     padding: 24px 18px;
 }
@@ -104,7 +104,7 @@ body {
     font-size: 30px;
     font-weight: 700;
     margin-top: 10px;
-    color: #6C63FF;
+    color: #EC4899;
 }
 
 /* Tasks */
@@ -124,7 +124,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #F3F1FF;
+    background: #FFF1F7;
     padding: 14px 16px;
     border-radius: 14px;
     margin-bottom: 12px;
@@ -141,10 +141,10 @@ body {
 
 .done {
     background: #EAF8F1;
-    color: #2ECC71;
+    color: #22C55E;
 }
 
 .pending {
-    background: #FFF5E1;
-    color: #F5A623;
+    background: #FFF7ED;
+    color: #F59E0B;
 }
