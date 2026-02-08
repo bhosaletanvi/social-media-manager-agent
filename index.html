@@ -1,14 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Social Media Manager Agent</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Social Media Manager Agent</h1>
-    <p>Welcome to the dashboard</p>
 
-    <button>View Insights</button>
-    <button>Schedule Post</button>
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">SMMA</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Insights</li>
+            <li>Schedule</li>
+            <li>Content</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div>
+                <h2>Hi, User 👋</h2>
+                <p>Here’s your social media overview</p>
+            </div>
+        </header>
+
+        <!-- Cards -->
+        <section class="cards">
+            <div class="card">
+                <h3>Total Posts</h3>
+                <p class="number">128</p>
+            </div>
+            <div class="card">
+                <h3>Engagement</h3>
+                <p class="number">+24%</p>
+            </div>
+            <div class="card">
+                <h3>Scheduled</h3>
+                <p class="number">12</p>
+            </div>
+            <div class="card">
+                <h3>Followers</h3>
+                <p class="number">8.2k</p>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section class="tasks">
+            <h3>Today’s Tasks</h3>
+
+            <div class="task-card">
+                <span>📌 Schedule Instagram Post</span>
+                <span class="status done">Done</span>
+            </div>
+
+            <div class="task-card">
+                <span>📊 Analyze Engagement</span>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="task-card">
+                <span>💡 Generate Content Ideas</span>
+                <span class="status pending">Pending</span>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+
 </body>
 </html>
-
