@@ -19,7 +19,7 @@ body {
 /* Sidebar */
 .sidebar {
     width: 230px;
-    background: linear-gradient(180deg, #6C63FF, #5848E5);
+    background: pink;
     color: white;
     padding: 24px 18px;
 }
