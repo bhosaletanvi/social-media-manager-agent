@@ -2,30 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
-    background: #f4f3fb;
+    background-color: #F7F8FC;
+    color: #2D2E32;
 }
 
 /* Layout */
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 220px;
-    background: #6c5ce7;
+    width: 230px;
+    background: linear-gradient(180deg, #6C63FF, #5848E5);
     color: white;
-    padding: 20px;
+    padding: 24px 18px;
 }
 
 .logo {
     text-align: center;
-    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 35px;
 }
 
 .sidebar ul {
@@ -33,90 +36,115 @@ body {
 }
 
 .sidebar ul li {
-    padding: 12px;
+    padding: 12px 14px;
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
 }
 
 .sidebar ul li:hover,
 .sidebar ul li.active {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.18);
 }
 
-/* Main */
+/* Main content */
 .main {
     flex: 1;
-    padding: 25px;
+    padding: 28px;
 }
 
 /* Top bar */
 .topbar {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 25px;
+    background: #FFFFFF;
+    padding: 22px 24px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* Cards */
+.topbar h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.topbar p {
+    color: #7A7A8C;
+    font-size: 14px;
+}
+
+/* Stats cards */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 22px;
     margin-bottom: 30px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    background: #FFFFFF;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card h3 {
     font-size: 14px;
-    color: #777;
+    color: #7A7A8C;
+    font-weight: 500;
 }
 
 .number {
-    font-size: 26px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
     margin-top: 10px;
-    color: #6c5ce7;
+    color: #6C63FF;
 }
 
 /* Tasks */
 .tasks {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
+    background: #FFFFFF;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
 }
 
 .tasks h3 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-size: 18px;
 }
 
 .task-card {
     display: flex;
     justify-content: space-between;
-    background: #f4f3fb;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    align-items: center;
+    background: #F3F1FF;
+    padding: 14px 16px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
 }
 
+/* Status tags */
 .status {
-    padding: 4px 10px;
+    padding: 5px 14px;
     border-radius: 20px;
     font-size: 12px;
+    font-weight: 600;
 }
 
 .done {
-    background: #dff5ea;
-    color: #27ae60;
+    background: #EAF8F1;
+    color: #2ECC71;
 }
 
 .pending {
-    background: #fff3cd;
-    color: #f39c12;
+    background: #FFF5E1;
+    color: #F5A623;
 }
