@@ -81,11 +81,71 @@ button:hover {
         width: 90%;
     }
 }
+
+
+/* Sidebar */
+.sidebar{
+    width:230px;
+    background:linear-gradient(180deg,#EC4899,#DB2777);
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+/* Card style */
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+    
 </style>
 </head>
 
 <body>
 
+    
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>SMMA</h2>
+        <ul>
+            <li onclick="location.href='dashboard.html'">Dashboard</li>
+            <li onclick="location.href='insights.html'">Audience Insights</li>
+            <li onclick="location.href='schedule.html'">Schedule Posts</li>
+            <li onclick="location.href='content.html'">Content Ideas</li>
+            <li onclick="location.href='reports.html'">Reports</li>
+            <li onclick="location.href='settings.html'">Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        
 <div class="login-box">
     <h2>SMMA Login</h2>
 
@@ -98,6 +158,19 @@ button:hover {
     </div>
 
     <button onclick="location.href='dashboard.html'">Login</button>
+</div>
+
+
+        <h2>Page Title</h2>
+
+        <div class="card">
+            Replace this with page content.
+        </div>
+
+        <!-- PAGE CONTENT ENDS HERE -->
+
+    </div>
+
 </div>
 
 </body>
