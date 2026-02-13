@@ -1,60 +1,196 @@
-<!-- Main Content -->
-<div class="main">
+<!DOCTYPE html>
+<html>
+<head>
+<title>SMMA</title>
 
-    <h1 style="margin-bottom:20px;color:#DB2777;">Account Settings</h1>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
 
-    <!-- Profile Card -->
-    <div class="card" style="display:flex;align-items:center;gap:20px;">
-        <img src="https://i.pravatar.cc/100" style="border-radius:50%;">
-        <div>
-            <h3>Tanvi Bhosale</h3>
-            <p style="color:gray;">Admin Account</p>
-        </div>
+body{
+    background:#FDF2F8;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* Sidebar (UNCHANGED) */
+.sidebar{
+    width:230px;
+    background:linear-gradient(180deg,#EC4899,#DB2777);
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+/* Main */
+.main{
+    flex:1;
+    padding:40px;
+}
+
+/* Header */
+.settings-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.settings-header h2{
+    color:#DB2777;
+    font-size:26px;
+}
+
+/* Settings Card */
+.settings-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    max-width:500px;
+}
+
+/* Form Styling */
+label{
+    display:block;
+    margin-top:18px;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#444;
+}
+
+input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus{
+    border-color:#EC4899;
+    box-shadow:0 0 0 3px rgba(236,72,153,0.2);
+}
+
+/* Button */
+button{
+    margin-top:20px;
+    width:100%;
+    background:linear-gradient(90deg,#EC4899,#DB2777);
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Extra Section */
+.extra-settings{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid #eee;
+}
+
+.toggle{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:12px;
+}
+
+.toggle input{
+    width:auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar (Same As Yours) -->
+    <div class="sidebar">
+        <h2>SMMA</h2>
+        <ul>
+            <li onclick="location.href='index.html'">Dashboard</li>
+            <li onclick="location.href='insights.html'">Audience Insights</li>
+            <li onclick="location.href='schedule.html'">Schedule Posts</li>
+            <li onclick="location.href='content.html'">Content Ideas</li>
+            <li onclick="location.href='reports.html'">Reports</li>
+            <li onclick="location.href='settings.html'">Settings</li>
+        </ul>
     </div>
 
-    <!-- Settings Box -->
-    <div class="settings-box" style="margin-top:20px;">
+    <!-- Main Content -->
+    <div class="main">
 
-        <h3 style="margin-bottom:15px;color:#EC4899;">Update Details</h3>
-
-        <label>Change Username</label>
-        <input type="text" placeholder="New Username" 
-        style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:5px;">
-
-        <label>Change Password</label>
-        <input type="password" placeholder="New Password" 
-        style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:5px;">
-
-        <button style="width:100%;padding:12px;margin-top:20px;
-        background:linear-gradient(90deg,#EC4899,#DB2777);
-        color:white;border:none;border-radius:10px;
-        font-weight:bold;cursor:pointer;transition:0.3s;">
-            Save Changes
-        </button>
-
-    </div>
-
-    <!-- Preferences Card -->
-    <div class="card">
-        <h3 style="color:#EC4899;">Preferences</h3>
-
-        <div style="margin-top:15px;">
-            <label>
-                <input type="checkbox"> Email Notifications
-            </label>
+        <div class="settings-header">
+            <h2>⚙ Account Settings</h2>
         </div>
 
-        <div style="margin-top:10px;">
-            <label>
-                <input type="checkbox"> SMS Notifications
-            </label>
+        <div class="settings-box">
+
+            <label>Change Username</label>
+            <input type="text" placeholder="Enter new username">
+
+            <label>Change Password</label>
+            <input type="password" placeholder="Enter new password">
+
+            <button>Save Changes</button>
+
+            <div class="extra-settings">
+                <div class="toggle">
+                    <span>Enable Email Notifications</span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="toggle">
+                    <span>Enable Dark Mode</span>
+                    <input type="checkbox">
+                </div>
+            </div>
+
         </div>
 
-        <div style="margin-top:10px;">
-            <label>
-                <input type="checkbox"> Dark Mode
-            </label>
-        </div>
     </div>
 
 </div>
+
+</body>
+</html>
