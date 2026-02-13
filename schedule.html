@@ -63,6 +63,11 @@ body{
     margin-bottom:20px;
     box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
+    
+.form-box{background:white;padding:25px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+input,textarea{width:100%;padding:10px;margin:10px 0;border:1px solid #ddd;border-radius:8px}
+button{background:#EC4899;color:white;border:none;padding:10px 15px;border-radius:8px;cursor:pointer}
+button:hover{background:#DB2777}
 </style>
 
 </head>
@@ -86,7 +91,16 @@ body{
     <!-- Main Content -->
     <div class="main">
 
-        <!-- PAGE CONTENT STARTS HERE -->
+        
+
+<h2>Schedule a Post</h2>
+
+<div class="form-box">
+    <input type="text" placeholder="Post Title">
+    <textarea placeholder="Write your caption..."></textarea>
+    <input type="datetime-local">
+    <button>Schedule</button>
+</div>
 
         <h2>Page Title</h2>
 
