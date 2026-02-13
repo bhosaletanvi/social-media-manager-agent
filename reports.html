@@ -3,7 +3,8 @@
 <head>
 <title>SMMA</title>
 
-<style>*{
+<style>
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -19,7 +20,7 @@ body{
     min-height:100vh;
 }
 
-/* Sidebar */
+/* Sidebar (UNCHANGED) */
 .sidebar{
     width:230px;
     background:linear-gradient(180deg,#EC4899,#DB2777);
@@ -51,25 +52,82 @@ body{
 /* Main */
 .main{
     flex:1;
-    padding:30px;
+    padding:40px;
 }
 
-/* Card style */
-.card{
+/* Header */
+.report-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.report-header h2{
+    font-size:26px;
+    color:#DB2777;
+}
+
+.date-badge{
     background:white;
-    padding:20px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Cards Layout */
+.report-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* Attractive Card */
+.report-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.report-card:hover{
+    transform:translateY(-6px);
+}
+
+.report-card h3{
+    color:#DB2777;
+    margin-bottom:10px;
+}
+
+.report-card p{
+    font-size:22px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* Progress Bar */
+.progress{
+    background:#F3F4F6;
+    height:8px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.progress div{
+    height:8px;
+    border-radius:10px;
+    background:linear-gradient(90deg,#EC4899,#DB2777);
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- Sidebar -->
+    <!-- Sidebar (Same As Yours) -->
     <div class="sidebar">
         <h2>SMMA</h2>
         <ul>
@@ -85,23 +143,43 @@ body{
     <!-- Main Content -->
     <div class="main">
 
-
-
-<h2>Monthly Reports</h2>
-
-<div class="card">
-    <p><strong>Total Reach:</strong> 25,000</p>
-</div>
-
-<div class="card">
-    <p><strong>Top Performing Post:</strong> Motivational Reel</p>
-</div>
-        <h2>Page Title</h2>
-
-        <div class="card">
+        <div class="report-header">
+            <h2>📊 Monthly Reports</h2>
+            <div class="date-badge">October 2026</div>
         </div>
 
-        <!-- PAGE CONTENT ENDS HERE -->
+        <div class="report-cards">
+
+            <div class="report-card">
+                <h3>Total Reach</h3>
+                <p>25,000</p>
+                <div class="progress">
+                    <div style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="report-card">
+                <h3>Engagement Rate</h3>
+                <p>8.4%</p>
+                <div class="progress">
+                    <div style="width:65%"></div>
+                </div>
+            </div>
+
+            <div class="report-card">
+                <h3>Top Performing Post</h3>
+                <p>Motivational Reel</p>
+            </div>
+
+            <div class="report-card">
+                <h3>New Followers</h3>
+                <p>+1,250</p>
+                <div class="progress">
+                    <div style="width:70%"></div>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
